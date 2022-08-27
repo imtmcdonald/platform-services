@@ -5,8 +5,9 @@ metadata:
   namespace: argocd
 spec:
   interval: 10m0s
-  path: ./apps/sample-golang-app.yaml
-  prune: true
+  targetNamespace: argocd
   sourceRef:
     kind: GitRepository
     name: app-manifests
+  path: "./apps"
+  prune: true
