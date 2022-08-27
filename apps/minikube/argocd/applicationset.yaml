@@ -4,7 +4,7 @@ metadata:
   name: app-manifests
   namespace: argocd
 spec:
-  interval: 10m0s
+  interval: 1m0s
   targetNamespace: argocd
   sourceRef:
     kind: GitRepository
