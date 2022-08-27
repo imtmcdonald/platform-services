@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: app-manifests
-  namespace: argocd
 spec:
   interval: 5m0s
   ref:
