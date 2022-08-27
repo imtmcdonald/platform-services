@@ -5,12 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  dependsOn:
-    - name: infrastructure
-  sourceRef:
-    kind: GitRepository
-    name: app-manifests
   path: ./apps
   prune: true
   wait: true
-  timeout: 5m0s
+  sourceRef:
+    kind: GitRepository
+    name: app-manifests
