@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - argo.yaml
-  # - app-manifests.yaml
+  - app-manifests.yaml
