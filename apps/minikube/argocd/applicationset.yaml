@@ -1,3 +1,16 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: app-manifests
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  ref:
+    branch: main
+  secretRef:
+    name: flux-system
+  url: ssh://git@github.com/imtmcdonald/app-manifests
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
@@ -7,7 +20,7 @@ spec:
   interval: 10m0s
   path: ./apps
   prune: true
-  wait: true
+  validation: client
   sourceRef:
     kind: GitRepository
     name: app-manifests
