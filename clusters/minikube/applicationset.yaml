@@ -4,6 +4,7 @@ metadata:
   name: app-manifests
   namespace: flux-system
 spec:
+  targetNamespace: argocd
   interval: 10m0s
   dependsOn:
     - name: infrastructure
