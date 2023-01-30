@@ -6,8 +6,6 @@ metadata:
 spec:
   targetNamespace: kubegres
   interval: 10m0s
-  dependsOn:
-    - name: infrastructure
   sourceRef:
     kind: GitRepository
     name: kubegres
