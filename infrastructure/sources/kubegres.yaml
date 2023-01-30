@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
-metadata:
-  name: kubegres
-spec:
-  interval: 5m0s
-  ref:
-    tag: v1.16
-  url: https://github.com/reactive-tech/kubegres
